@@ -1,0 +1,33 @@
+Netflix Data Visualization using AWS
+
+Project Overview
+
+This project analyzes Netflix dataset using AWS serverless services.
+The data is stored in Amazon S3, queried using Amazon Athena, and automated using AWS Lambda.
+
+Architecture
+S3 → Athena → Lambda → S3
+
+Services Used
+- Amazon S3
+- Amazon Athena
+- AWS Lambda
+- AWS IAM
+
+Dataset
+Netflix movies and TV shows dataset (CSV format)
+
+How the Project Works
+1. Netflix CSV file is uploaded to S3
+2. External table is created in Athena
+3. Lambda function triggers Athena queries
+4. Query results are stored in S3
+5. Data is verified using SQL queries
+
+How to Verify
+- Run 'SELECT COUNT(*) FROM netflix;' in Athena
+- Trigger Lambda function and check CloudWatch logs
+- Verify Athena output files in S3
+
+Author
+Rithika S
